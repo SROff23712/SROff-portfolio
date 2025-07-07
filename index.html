@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>☠️ | _SR_Off_</title>
+<link rel="icon" href="https://raw.githubusercontent.com/SROff23712/image/refs/heads/main/favicon2.png" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  background: #121212;
+  color: #eee;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+
+  background-image: url('https://i.pinimg.com/originals/d7/94/ce/d794ce07f7f8c654059b2c8a93b0a0f0.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: pixelated;
+  background-attachment: fixed;
+
+}
+
+
+  /* Barre de navigation fixe */
+  header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 60px;
+    background: #1e1e1e;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.7);
+    z-index: 100;
+    gap: 20px; /* espace entre logo et nav */
+  }
+
+  .logo img {
+    height: 40px; /* ajuste la taille de l'image */
+    width: auto;
+    display: block;
+  }
+
+  header nav {
+    margin-left: auto;
+  }
+  header nav a {
+    color: #ffffff;
+    margin-left: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  header nav a:hover {
+    color: #21a1f1;
+  }
+
+  main {
+    padding-top: 100px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  /* Section home : pseudo + bouton */
+  #home-section {
+    height: 90vh; /* hauteur importante pour centrer verticalement */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  #home-section h1 {
+    font-size: 6rem;
+    font-weight: 900;
+    margin: 0;
+    color: #000000;
+    text-shadow: 0 0 15px #61dafb88;
+  }
+  #btn-projets {
+    background: #61dafb;
+    color: #121212;
+    font-weight: 700;
+    padding: 20px 80px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1.8rem;
+    box-shadow: 0 5px 20px #61dafb88;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  #btn-projets:hover {
+    background: #b1b1b1;
+    box-shadow: 0 8px 25px #21a1f188;
+  }
+
+  /* Section projets plus bas, espacé largement */
+  #projets {
+    padding: 80px 20px 120px;
+    position: relative;
+  }
+
+.project.left {
+  position: relative;
+  max-width: 40vw;
+  background: rgba(31, 31, 31, 0.7);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(97, 218, 251, 0.2);
+  margin-bottom: 100px;
+  padding: 40px 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px #61dafb44;
+  font-size: 1.3rem;
+  opacity: 0;
+  transform: translateX(-80px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  left: 0;
+  margin-left: 100px;
+}
+
+
+
+  .project.left.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Projet aligné à droite */
+  .project.right {
+    position: relative;
+    max-width: 40vw;
+  background: rgba(31, 31, 31, 0.7);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(97, 218, 251, 0.2);
+    margin-bottom: 100px;
+    padding: 40px 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px #61dafb44;
+    font-size: 1.3rem;
+    opacity: 0;
+    transform: translateX(80px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    right: 0;
+    margin-left: auto;
+    margin-right: 100px;
+  }
+
+  .project.right.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  /* Titres projets */
+  .project h3 {
+    color: #61dafb;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 2rem;
+  }
+  .project p {
+    margin: 0;
+    line-height: 1.6;
+    color: #ccc;
+  }
+
+  /* Section Contact */
+  #contact {
+    padding: 60px 20px 100px;
+    text-align: center;
+  }
+  #contact h2 {
+    font-size: 3rem;
+    color: #61dafb;
+    margin-bottom: 40px;
+  }
+  #contact .links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  #contact .links a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #eee;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  #contact .links a:hover {
+    color: #21a1f1;
+  }
+  #contact .links a .icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .project.left, .project.right {
+      max-width: 90vw;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      transform: translateX(0) !important;
+      opacity: 1 !important;
+    }
+    #contact .links {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <img src="https://raw.githubusercontent.com/SROff23712/image/refs/heads/main/favicon2.png" alt="Logo" />
+  </div>
+  <nav>
+    <a href="#home-section">Home</a>
+    <a href="#projets">Projets</a>
+    <a href="#contact">Me retrouver</a>
+  </nav>
+</header>
+
+<main>
+  <section id="home-section" aria-label="Accueil">
+    <h1>_SR_Off_</h1>
+    <button id="btn-projets">View Projets</button>
+  </section>
+
+  <section id="projets" aria-label="Liste des projets">
+    <div class="project left">
+      <h3>Mods List Pour La SurvieGolmon</h3>
+      <p>Ce <a href="https://survie-golmon.vercel.app/">site</a> consiste a avoir une liste complete des mods qui sont sur notre serveur minecraft.</p>
+    </div>
+
+    <div class="project right">
+      <h3>MineCalc V2</h3>
+      <p>une calculatrice dans le style de minecraft. <a href="https://download937.mediafire.com/i673fzkvw5wgFLfHp5zOl3PH0N23ercsU5WO87m5USdUnk_WHZslwuhmn0GKPO3XNi8QqWxiJINyRtRGIRqZvQGotnxRiInuPEjtxPBc19zs55oRFBDVC-oHxIBBnX4emK1APQxh6JUhv7jejo_LE527KMBDrN2rTJCYrjwY4Rdf/fo6g8k96uz79d5z/MineCalc_V2+Setup+1.0.0.exe">Téléchargeable</a> sur MediaFire</p>
+    </div>
+
+    <div class="project left">
+      <h3>Projet 3</h3>
+      <p>Description courte du projet 3, aligné à gauche.</p>
+    </div>
+
+    <div class="project right">
+      <h3>Projet 4</h3>
+      <p>Description courte du projet 4, aligné à droite.</p>
+    </div>
+
+    <div class="project left">
+      <h3>Projet 5</h3>
+      <p>Description courte du projet 5, aligné à gauche.</p>
+    </div>
+
+    <div class="project right">
+      <h3>Projet 6</h3>
+      <p>Description courte du projet 6, aligné à droite.</p>
+    </div>
+  </section>
+
+<section id="contact" aria-label="Contact" style="
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+">
+  <a href="https://www.youtube.com/@SR_Off" target="_blank" rel="noopener" aria-label="YouTube" style="display: inline-block; width: 48px; height: 48px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="YouTube" style="width: 100%; height: 100%; object-fit: contain;" />
+  </a>
+
+  <a href="https://www.twitch.tv/SROff23712" target="_blank" rel="noopener" aria-label="Twitch" style="display: inline-block; width: 48px; height: 48px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Twitch_Glitch_Logo_Purple.svg/1756px-Twitch_Glitch_Logo_Purple.svg.png" alt="Twitch" style="width: 100%; height: 100%; object-fit: contain;" />
+  </a>
+
+  <a href="https://discord.com/invite/peZ7Ds6Zwt" target="_blank" rel="noopener" aria-label="Discord" style="display: inline-block; width: 48px; height: 48px;">
+    <img src="https://upload.wikimedia.org/wikipedia/fr/thumb/4/4f/Discord_Logo_sans_texte.svg/1818px-Discord_Logo_sans_texte.svg.png" alt="Discord" style="width: 100%; height: 100%; object-fit: contain;" />
+  </a>
+</section>
+
+<style>
+  #contact a {
+    transition: transform 0.25s ease;
+  }
+  #contact a:hover {
+    transform: scale(1.2);
+  }
+  @media (max-width: 480px) {
+    #contact {
+      gap: 30px;
+      margin-bottom: 60px;
+    }
+    #contact a {
+      width: 36px;
+      height: 36px;
+    }
+  }
+</style>
+
+
+
+</main>
+
+<script>
+const projects = document.querySelectorAll('.project');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target); // arrêter d'observer une fois visible
+    }
+  });
+}, {
+  threshold: 0.1 // déclenche quand 10% de l'élément est visible
+});
+
+// Observer chaque projet
+projects.forEach(project => {
+  observer.observe(project);
+});
+
+// Garder le comportement du bouton qui scroll et affiche les projets (optionnel)
+const btn = document.getElementById('btn-projets');
+const projetsSection = document.getElementById('projets');
+btn.addEventListener('click', () => {
+  projetsSection.scrollIntoView({ behavior: 'smooth' });
+  // L'animation est déjà gérée au scroll, inutile de la refaire ici
+});
+</script>
+
+</body>
+</html>
