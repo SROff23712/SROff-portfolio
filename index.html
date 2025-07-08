@@ -108,6 +108,7 @@ body {
 .project.left {
   position: relative;
   max-width: 40vw;
+  height: 300px;
   background: rgba(31, 31, 31, 0.7);
   backdrop-filter: blur(4px);
   border: 1px solid rgba(97, 218, 251, 0.2);
@@ -134,6 +135,7 @@ body {
   .project.right {
     position: relative;
     max-width: 40vw;
+  height: 300px;
   background: rgba(31, 31, 31, 0.7);
   backdrop-filter: blur(4px);
   border: 1px solid rgba(97, 218, 251, 0.2);
@@ -237,37 +239,48 @@ body {
     <button id="btn-projets">View Projets</button>
   </section>
 
-  <section id="projets" aria-label="Liste des projets">
-    <div class="project left">
+<section id="projets" aria-label="Liste des projets">
+  <div class="project left" style="display: flex; align-items: flex-start; gap: 40px;">
+    
+    <!-- Texte à gauche -->
+    <div style="margin-top: -10px;">
       <h3>Mods List Pour La SurvieGolmon</h3>
-      <p>Ce <a href="https://survie-golmon.vercel.app/">site</a> consiste a avoir une liste complete des mods qui sont sur notre serveur minecraft.</p>
+      <p>
+        <br><br><br>Ce <a href="https://survie-golmon.vercel.app/">site</a> consiste à avoir une liste complète des mods qui sont<br>
+        sur notre serveur Minecraft.
+      </p>
     </div>
+    
+    <!-- Image à droite avec un décalage -->
+    <img 
+      src="https://cdn.jsdelivr.net/gh/SROff23712/image/Capture%20d’écran%202025-07-08%20015055.png" 
+      style="width: 300px; height: auto; border-radius: 10px;" 
+      alt="Capture d'écran">
 
-    <div class="project right">
+  </div>
+</section>
+
+<section id="projets" aria-label="Liste des projets">
+  <div class="project right" style="display: flex; align-items: flex-start; gap: 40px;">
+    
+    <!-- Texte à gauche -->
+    <div style="margin-top: -10px;">
       <h3>MineCalc V2</h3>
-      <p>une calculatrice dans le style de minecraft. <a href="https://download937.mediafire.com/i673fzkvw5wgFLfHp5zOl3PH0N23ercsU5WO87m5USdUnk_WHZslwuhmn0GKPO3XNi8QqWxiJINyRtRGIRqZvQGotnxRiInuPEjtxPBc19zs55oRFBDVC-oHxIBBnX4emK1APQxh6JUhv7jejo_LE527KMBDrN2rTJCYrjwY4Rdf/fo6g8k96uz79d5z/MineCalc_V2+Setup+1.0.0.exe">Téléchargeable</a> sur MediaFire</p>
+      <p>
+        <br><br><br>MineCalc est une Calculatrice dans le style de Minecraft. <a href="https://download937.mediafire.com/nrfkz02bnjrgUu7fl1_efpcNPa_tV9K66Q840HXNXeq5fl2x4Mr69gHN3HbilOwjVGHSihXaGBoVBo97AQ3Tc-dIHAhKzaDFUWsBttHr2pfBkwArrgIGqY34p4rgLmuq_o0FoKXvsydoGYPAsUtoObUtYGF1lpvpTmYMZBfTVnhB/fo6g8k96uz79d5z/MineCalc_V2+Setup+1.0.0.exe">Téléchargeable ici</a>
+      </p>
     </div>
+    
+    <!-- Image à droite avec un décalage -->
+    <img 
+      src="https://raw.githubusercontent.com/SROff23712/image/refs/heads/main/Sans%20titre.png" 
+      style="width: 200px; height: auto; border-radius: 10px;" 
+      alt="Capture d'écran">
 
-    <div class="project left">
-      <h3>Projet 3</h3>
-      <p>Description courte du projet 3, aligné à gauche.</p>
-    </div>
+  </div>
+</section>
 
-    <div class="project right">
-      <h3>Projet 4</h3>
-      <p>Description courte du projet 4, aligné à droite.</p>
-    </div>
 
-    <div class="project left">
-      <h3>Projet 5</h3>
-      <p>Description courte du projet 5, aligné à gauche.</p>
-    </div>
-
-    <div class="project right">
-      <h3>Projet 6</h3>
-      <p>Description courte du projet 6, aligné à droite.</p>
-    </div>
-  </section>
 
 <section id="contact" aria-label="Contact" style="
   display: flex;
